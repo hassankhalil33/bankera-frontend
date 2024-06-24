@@ -1,6 +1,6 @@
 import React from 'react';
-import "bootstrap/dist/css/bootstrap.css";
 import Button from './components/Button';
+import LoginPage from './screens/LoginPage';
 
 const handleClick = () => {
   console.log("Clicked");
@@ -8,9 +8,9 @@ const handleClick = () => {
 
 function App() {
   return (
-    <Button click={handleClick} type={"primary"}>
-      Sign In
-    </Button>
+    <div className="d-flex align-items-center">
+      <LoginPage />
+    </div>
   );
 }
 
