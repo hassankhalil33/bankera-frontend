@@ -1,10 +1,11 @@
 import React from "react";
+import "../App.css";
 
-const Button = ({ children, type, click }) => {
+const Button = ({ children, color = "blue", onPress }) => {
   return (
     <button
-      className={"btn btn-" + type}
-      onClick={click}
+      className={"btn " + color}
+      onClick={onPress}
     >
       {children}
     </button>

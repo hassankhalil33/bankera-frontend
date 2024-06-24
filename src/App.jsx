@@ -1,17 +1,20 @@
 import React from 'react';
-import Button from './components/Button';
 import LoginPage from './screens/LoginPage';
+import Button from './components/Button';
+import "./App.css";
 
 const handleClick = () => {
-  console.log("Clicked");
-}
+  console.log("clicked!")
+};
 
 function App() {
   return (
-    <div className="d-flex align-items-center">
-      <LoginPage />
+    <div className="sign-in-page">
+      <Button onPress={handleClick} color={"red"}>
+        Sign In
+      </Button>
     </div>
   );
-}
+};
 
 export default App;
