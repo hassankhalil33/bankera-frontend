@@ -1,14 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.css";
+import Button from './components/Button';
+
+const handleClick = () => {
+  console.log("Clicked");
+}
 
 function App() {
   return (
-    <div className="App">
-      <p>
-        Test
-      </p>
-    </div>
+    <Button click={handleClick} type={"primary"}>
+      Sign In
+    </Button>
   );
 }
 
