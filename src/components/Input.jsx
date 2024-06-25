@@ -1,10 +1,10 @@
 import React from "react";
 
-const Input = ({ placeholder }) => {
+const Input = ({ placeholder, type = "text" }) => {
   return (
     <input
-      type="text"
-      className="form-control"
+      type={type}
+      className="input"
       placeholder={placeholder}
     />
   )

@@ -1,7 +1,8 @@
 import React from 'react';
+import "./App.css";
 import LoginPage from './screens/LoginPage';
 import Button from './components/Button';
-import "./App.css";
+import Input from './components/Input';
 
 const handleClick = () => {
   console.log("clicked!")
@@ -10,9 +11,7 @@ const handleClick = () => {
 function App() {
   return (
     <div className="sign-in-page">
-      <Button onPress={handleClick} color={"red"}>
-        Sign In
-      </Button>
+      <Input placeholder={"Username"} />
     </div>
   );
 };

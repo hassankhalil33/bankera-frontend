@@ -5,11 +5,11 @@
 }
 
 .blue {
-  background-color: blue;
+  background-color: rgb(30, 30, 255);
 }
 
 .red {
-  background-color: red;
+  background-color: rgb(255, 39, 39);
 }
 
 .sign-in-page {
@@ -31,4 +31,15 @@
   font-weight: bold;
   color: rgb(230, 235, 240);
   cursor: pointer;
+}
+
+.input {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 6px;
+  border-radius: 8px;
+  background-color: rgb(230, 230, 230);
+  border-color: black;
+  border: 1px solid;
 }
