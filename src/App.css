@@ -21,6 +21,16 @@
   width: 100vw;
 }
 
+.sign-in-page>h1 {
+  position: absolute;
+  font-size: 64px;
+  color: rgb(30, 30, 255);
+  padding-top: 30px;
+  padding-left: 10vw;
+  top: 0;
+  left: 0;
+}
+
 .btn {
   display: flex;
   justify-content: center;
@@ -35,6 +45,7 @@
 
 .input {
   display: flex;
+  height: 20px;
   justify-content: flex-start;
   align-items: center;
   padding: 6px;
@@ -42,4 +53,30 @@
   background-color: rgb(230, 230, 230);
   border-color: black;
   border: 1px solid;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(253, 249, 245);
+  height: 35vh;
+  width: 17vw;
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid rgb(30, 30, 255);
+}
+
+.login-form>p {
+  align-self: flex-end;
+  font-size: 14px;
+}
+
+.login-form>div {
+  height: 10vh;
+}
+
+.login-form>div>h3 {
+  font-size: 28px;
+  font-weight: bold;
 }
