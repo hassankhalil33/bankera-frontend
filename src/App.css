@@ -12,7 +12,7 @@
   background-color: rgb(255, 39, 39);
 }
 
-.sign-in-page {
+.bg1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +21,7 @@
   width: 100vw;
 }
 
-.sign-in-page>h1 {
+.bg1>h1 {
   position: absolute;
   font-size: 64px;
   color: rgb(30, 30, 255);
@@ -77,6 +77,32 @@
 }
 
 .login-form>div>h3 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(253, 249, 245);
+  height: 40vh;
+  width: 17vw;
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid rgb(30, 30, 255);
+}
+
+.register-form>p {
+  align-self: flex-end;
+  font-size: 14px;
+}
+
+.register-form>div {
+  height: 10vh;
+}
+
+.register-form>div>h3 {
   font-size: 28px;
   font-weight: bold;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import "./App.css";
+import RegisterPage from './screens/RegisterPage';
 import LoginPage from './screens/LoginPage';
 import Button from './components/Button';
 import Input from './components/Input';
@@ -10,8 +11,8 @@ const handleClick = () => {
 
 function App() {
   return (
-    <div className="sign-in-page">
-      <LoginPage />
+    <div className="bg1">
+      <RegisterPage />
     </div>
   );
 };
