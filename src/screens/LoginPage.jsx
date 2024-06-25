@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import Input from "../components/Input";
 
 const LoginPage = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleUserChange = (e) => {
+    setUsername(e.target.value);
+  };
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
   return (
-    <div className="input-group mb-3">
-      <label htmlFor="">Login</label>
-      <Input placeholder={"username"} />
-      <Input placeholder={"password"} />
-      <Input placeholder={"email"} />
-    </div>
+    <form action="">
+      <h3>Login</h3>
+      <Input
+        value={username}
+        handleChange={handleUserChange}
+        placeholder={"username"}
+      />
+      <Input
+        value={password}
+        handleChange={handlePasswordChange}
+        placeholder={"username"}
+        type="password"
+      />
+    </form>
   )
 };
 

@@ -11,7 +11,7 @@ const handleClick = () => {
 function App() {
   return (
     <div className="sign-in-page">
-      <Input placeholder={"Username"} />
+      <LoginPage />
     </div>
   );
 };
