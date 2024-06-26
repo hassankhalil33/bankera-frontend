@@ -19,16 +19,16 @@ const NavBar = () => {
     <div className="nav-bar">
       <h1>Bankera</h1>
       <div className="btn-div">
-        <Button onPress={handleHomeButton} size="large">
+        <Button onPress={handleHomeButton} size="large" color="white">
           Home
         </Button>
-        <Button onPress={handleLoginButton} size="large">
+        <Button onPress={handleLoginButton} size="large" color="white">
           Login
         </Button>
-        <Button onPress={handleRegisterButton} size="large">
+        <Button onPress={handleRegisterButton} size="large" color="white">
           Register
         </Button>
-        <Button onPress={handleAboutButton} size="large">
+        <Button onPress={handleAboutButton} size="large" color="white">
           About
         </Button>
       </div>
