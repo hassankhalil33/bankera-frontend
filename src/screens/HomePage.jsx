@@ -5,7 +5,9 @@ const HomePage = () => {
   return (
     <>
       <NavBar />
-      <h1>This is the Home Page</h1>
+      <div className="form-container">
+        <h1>This is the Home Page</h1>
+      </div>
     </>
   )
 };
