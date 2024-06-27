@@ -12,22 +12,24 @@ const handleClick = () => {
   console.log("clicked!")
 };
 
-const router = createBrowserRouter([{
-  path: "/",
-  element: <HomePage />
-},
-{
-  path: "/login",
-  element: <LoginPage />
-},
-{
-  path: "/register",
-  element: <RegisterPage />
-},
-{
-  path: "/about",
-  element: <AboutPage />
-}
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+    errorElement: <div>404 Not Found!</div>
+  },
+  {
+    path: "/login",
+    element: <LoginPage />
+  },
+  {
+    path: "/register",
+    element: <RegisterPage />
+  },
+  {
+    path: "/about",
+    element: <AboutPage />
+  }
 ]);
 
 function App() {

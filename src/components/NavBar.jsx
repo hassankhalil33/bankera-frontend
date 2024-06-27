@@ -1,19 +1,22 @@
 import React from "react";
 import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
-  const handleHomeButton = (e) => {
-    console.log(`Clicked ${e.target.textContent} Button!`)
-  }
-  const handleLoginButton = (e) => {
-    console.log(`Clicked ${e.target.textContent} Button!`)
-  }
-  const handleRegisterButton = (e) => {
-    console.log(`Clicked ${e.target.textContent} Button!`)
-  }
-  const handleAboutButton = (e) => {
-    console.log(`Clicked ${e.target.textContent} Button!`)
-  }
+  const navigate = useNavigate();
+
+  const handleHomeButton = () => {
+    navigate("/");
+  };
+  const handleLoginButton = () => {
+    navigate("/login");
+  };
+  const handleRegisterButton = () => {
+    navigate("/register");
+  };
+  const handleAboutButton = () => {
+    navigate("/about");
+  };
 
   return (
     <div className="nav-bar">
