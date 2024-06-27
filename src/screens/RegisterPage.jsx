@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Input from "../components/Input";
 import Button from "../components/Button";
+import NavBar from "../components/NavBar";
 
 const handleRegister = (e) => {
   e.preventDefault();
@@ -28,39 +29,41 @@ const LoginPage = () => {
 
   return (
     <>
-      <h1>Bankera</h1>
-      <form className="register-form">
-        <div>
-          <h3>Register</h3>
-        </div>
+      <NavBar />
+      <div className="form-container">
+        <form className="register-form">
+          <div>
+            <h3>Register</h3>
+          </div>
 
-        <Input
-          value={username}
-          handleChange={handleUserChange}
-          placeholder={"Username"}
-        />
-        <Input
-          value={name}
-          handleChange={handleNameChange}
-          placeholder={"Name"}
-        />
-        <Input
-          value={password}
-          handleChange={handlePasswordChange}
-          placeholder={"Password"}
-          type="password"
-        />
-        <Input
-          value={email}
-          handleChange={handleEmailChange}
-          placeholder={"Email"}
-          type="email"
-        />
-        <Button onPress={handleRegister}>
-          Register
-        </Button>
-        <p>already a member? <a href="">sign in</a></p>
-      </form>
+          <Input
+            value={username}
+            handleChange={handleUserChange}
+            placeholder={"Username"}
+          />
+          <Input
+            value={name}
+            handleChange={handleNameChange}
+            placeholder={"Name"}
+          />
+          <Input
+            value={password}
+            handleChange={handlePasswordChange}
+            placeholder={"Password"}
+            type="password"
+          />
+          <Input
+            value={email}
+            handleChange={handleEmailChange}
+            placeholder={"Email"}
+            type="email"
+          />
+          <Button onPress={handleRegister}>
+            Register
+          </Button>
+          <p>already a member? <a href="">sign in</a></p>
+        </form>
+      </div>
     </>
   )
 };
