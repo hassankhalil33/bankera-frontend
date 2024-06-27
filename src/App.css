@@ -10,21 +10,40 @@
   background-color: rgb(253, 249, 245);
 }
 
-/* .bg1>h1 {
-  position: absolute;
-  font-size: 64px;
-  color: rgb(30, 30, 255);
-  padding-top: 30px;
-  padding-left: 10vw;
-  top: 0;
-  left: 0;
-} */
-
 .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 90vh;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-container>h1 {
+  font-size: 56px;
+  font-weight: 900;
+  padding: 15px;
+  color: rgb(30, 30, 255);
+}
+
+.home-container>h5 {
+  font-size: 22px;
+  padding: 5px 25vw;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  width: 100vw;
+  height: 75vh;
+  opacity: 0.8;
 }
 
 .btn {
@@ -46,7 +65,7 @@
 }
 
 .btn-white {
-  background-color: rgb(230, 235, 240);
+  background-color: rgb(253, 249, 245);
   color: rgb(55, 55, 55);
 }
 
