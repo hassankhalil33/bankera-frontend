@@ -5,12 +5,6 @@ import RegisterPage from './screens/RegisterPage';
 import LoginPage from './screens/LoginPage';
 import AboutPage from './screens/AboutPage';
 import HomePage from './screens/HomePage';
-import Button from './components/Button';
-import Input from './components/Input';
-
-const handleClick = () => {
-  console.log("clicked!")
-};
 
 const router = createBrowserRouter([
   {

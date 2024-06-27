@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Input from "../components/Input";
 import Button from "../components/Button";
 import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
 
 const handleLogin = (e) => {
   e.preventDefault();
@@ -42,7 +43,7 @@ const LoginPage = () => {
           <Button onPress={handleLogin}>
             Sign In
           </Button>
-          <p>not a member? <a href="">sign up</a></p>
+          <p>not a member? <Link to={"/register"}>sign up</Link></p>
         </form>
       </div>
     </>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Input from "../components/Input";
 import Button from "../components/Button";
 import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
 
 const handleRegister = (e) => {
   e.preventDefault();
@@ -61,7 +62,7 @@ const LoginPage = () => {
           <Button onPress={handleRegister}>
             Register
           </Button>
-          <p>already a member? <a href="">sign in</a></p>
+          <p>already a member? <Link to={"/login"}>sign in</Link></p>
         </form>
       </div>
     </>
