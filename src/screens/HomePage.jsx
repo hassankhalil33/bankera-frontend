@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
           So what are you waiting for? Join Now!
         </h5>
       </div>
+      <Footer />
     </>
   )
 };
