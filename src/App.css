@@ -43,7 +43,7 @@
 
 .btn-white {
   background-color: rgb(230, 235, 240);
-  color: black;
+  color: rgb(55, 55, 55);
 }
 
 .btn-small {
@@ -77,7 +77,7 @@
   align-self: flex-start;
   padding: 10px 15vw;
   width: 100vw;
-  background-color: rgb(55, 55, 55);
+  background-color: rgb(27, 27, 222);
 }
 
 .nav-bar>h1 {
