@@ -3,6 +3,7 @@ import Input from "../components/Input";
 import Button from "../components/Button";
 import NavBar from "../components/NavBar";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const handleRegister = (e) => {
   e.preventDefault();
@@ -65,6 +66,7 @@ const LoginPage = () => {
           <p>already a member? <Link to={"/login"}>sign in</Link></p>
         </form>
       </div>
+      <Footer />
     </>
   )
 };
