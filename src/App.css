@@ -39,7 +39,7 @@ body {
 .img {
   width: 99vw;
   height: 90vh;
-  opacity: 0.5;
+  opacity: 0.3;
   position: absolute;
   z-index: 0;
 }
@@ -252,7 +252,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 20vh;
+  height: 500px;
   width: 100%;
   background-color: rgb(28, 28, 28);
   color: rgb(253, 249, 245);
@@ -260,4 +260,43 @@ body {
 
 .footer>div>ul {
   list-style-type: none;
+  padding-bottom: 100px;
+}
+
+.footer-li {
+  list-style-type: none;
+  padding-bottom: 25px;
+}
+
+.footer-div {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+}
+
+.footer-div2 {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  height: 300px;
+  align-items: flex-start;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: rgb(253, 249, 245);
+}
+
+.footer-link:hover {
+  color: rgb(27, 27, 222);
+}
+
+#logo-footer {
+  color: rgb(27, 27, 222);
+}
+
+.img-footer {
+  width: 40px;
+  height: auto;
 }
