@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .bg1 {
   display: flex;
   flex-direction: column;
@@ -50,13 +54,13 @@
 }
 
 #h5-hero {
-  font-size: 26px;
+  font-size: 24px;
   padding: 5px 24vw;
   opacity: 1;
   z-index: 1;
   text-align: center;
   padding-bottom: 30px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .btn {
@@ -197,4 +201,8 @@
   width: 100%;
   background-color: rgb(28, 28, 28);
   color: rgb(253, 249, 245);
+}
+
+.footer>div>ul {
+  list-style-type: none;
 }
