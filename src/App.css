@@ -11,7 +11,7 @@ body {
 .bg1 {
   display: flex;
   flex-direction: column;
-  background-color: rgb(253, 249, 245);
+  background-color: #FFFFFF;
 }
 
 .form-container {
@@ -95,7 +95,7 @@ body {
 .btn-large {
   padding: 10px 14px;
   font-size: 20px;
-  border-radius: 12px;
+  border-radius: 18px;
 }
 
 #btn-index-1 {
@@ -190,6 +190,36 @@ body {
 .register-form>div>h3 {
   font-size: 28px;
   font-weight: bold;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
+  padding: 15vh 15vw 0 15vw;
+}
+
+.content-container-last {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
+  padding: 15vh 15vw;
+}
+
+.content-container>div {
+  width: 500px;
+}
+
+.img-ctn1 {
+  max-width: 80%;
+  height: auto;
+}
+
+.img-ctn2 {
+  max-width: 100%;
+  height: auto;
 }
 
 .footer {
