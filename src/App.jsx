@@ -5,6 +5,7 @@ import RegisterPage from './screens/RegisterPage';
 import LoginPage from './screens/LoginPage';
 import AboutPage from './screens/AboutPage';
 import HomePage from './screens/HomePage';
+import ProfilePage from './screens/ProfilePage';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <AboutPage />
+  },
+  {
+    path: "/profile",
+    element: <ProfilePage />
   }
 ]);
 
