@@ -82,8 +82,8 @@ body {
 }
 
 .btn-white {
-  background-color: rgb(253, 249, 245);
-  color: rgb(55, 55, 55);
+  background-color: white;
+  color: black;
 }
 
 .btn-small {
@@ -205,11 +205,27 @@ body {
   justify-content: space-around;
   align-items: center;
   height: 70vh;
-  padding: 15vh 15vw;
+  padding: 15vh 15vw 20vh 15vw;
 }
 
 .content-container>div {
   width: 500px;
+}
+
+.h3-content {
+  font-size: 48px;
+  font-weight: 800;
+  color: rgb(27, 27, 222);
+}
+
+.p-content {
+  font-size: 20px;
+  padding: 25px 0;
+  font-weight: 500;
+}
+
+#p-smaller {
+  width: 450px;
 }
 
 .img-ctn1 {
@@ -220,6 +236,15 @@ body {
 .img-ctn2 {
   max-width: 100%;
   height: auto;
+}
+
+.img-ctn3 {
+  max-width: 65%;
+  height: auto;
+}
+
+.img-align {
+  text-align: center;
 }
 
 .footer {
