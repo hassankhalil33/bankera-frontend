@@ -1,11 +1,12 @@
 import React from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import "./App.css";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import RegisterPage from './screens/RegisterPage';
 import LoginPage from './screens/LoginPage';
 import AboutPage from './screens/AboutPage';
 import HomePage from './screens/HomePage';
 import ProfilePage from './screens/ProfilePage';
+import { UserContextProvider } from './contexts/UserContext';
 
 const router = createBrowserRouter([
   {
@@ -34,7 +35,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div className="bg1">
-      <RouterProvider router={router} />
+      <UserContextProvider>
+        <RouterProvider router={router} />
+      </UserContextProvider>
     </div>
   );
 };
