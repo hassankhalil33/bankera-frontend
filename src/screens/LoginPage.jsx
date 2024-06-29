@@ -1,24 +1,24 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Input from "../components/Input";
 import Button from "../components/Button";
 import NavBar from "../components/NavBar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
-
-const handleLogin = (e) => {
-  e.preventDefault();
-  console.log("Logged In!");
-};
+import { UserContext } from "../contexts/UserContext";
 
 const LoginPage = () => {
+  const { setJWT } = useContext(UserContext);
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleUserChange = (e) => {
-    setUsername(e.target.value);
-  };
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
+  const handleUserChange = (e) => setUsername(e.target.value);
+  const handlePasswordChange = (e) => setPassword(e.target.value);
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    setJWT("logged.in");
+    navigate("/profile");
   };
 
   return (

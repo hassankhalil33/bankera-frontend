@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../contexts/UserContext";
 
 const NavBar = () => {
-  const [isAuth, setIsAuth] = useState(true);
+  const { jwt, setJWT } = useContext(UserContext);
   const navigate = useNavigate();
 
   const handleHomeButton = () => {
@@ -22,7 +23,8 @@ const NavBar = () => {
     navigate("/profile");
   };
   const handleLogoutButton = () => {
-    setIsAuth(false);
+    setJWT("");
+    navigate("/");
   };
 
   return (
@@ -33,7 +35,7 @@ const NavBar = () => {
           Home
         </Button>
         {
-          isAuth ?
+          jwt ?
             <>
               < Button onPress={handleAccountButton} size="large" color="navbar">
                 Account
