@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import { UserContext } from "../contexts/UserContext";
 
 const ProfilePage = () => {
+  const { username } = useContext(UserContext);
+
   return (
     <>
       <NavBar />
       <div className="form-container">
-        <h1>This is the Profile Page.</h1>
+        <h1>{`Welcome ${username}`}</h1>
       </div>
       <Footer />
     </>

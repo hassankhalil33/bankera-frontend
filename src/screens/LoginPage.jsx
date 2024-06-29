@@ -7,18 +7,23 @@ import Footer from "../components/Footer";
 import { UserContext } from "../contexts/UserContext";
 
 const LoginPage = () => {
-  const { setJWT } = useContext(UserContext);
+  const { setJWT, setUsername } = useContext(UserContext);
   const navigate = useNavigate();
-  const [username, setUsername] = useState("");
+  const [inputUsername, setInputUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleUserChange = (e) => setUsername(e.target.value);
+  const handleUserChange = (e) => setInputUsername(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
 
   const handleLogin = (e) => {
     e.preventDefault();
-    setJWT("logged.in");
-    navigate("/profile");
+    setUsername(inputUsername);
+    setInputUsername("");
+    setPassword("");
+    setTimeout(() => {
+      navigate("/profile");
+      setJWT("logged.in");
+    }, 1000);
   };
 
   return (
@@ -31,7 +36,7 @@ const LoginPage = () => {
           </div>
 
           <Input
-            value={username}
+            value={inputUsername}
             handleChange={handleUserChange}
             placeholder={"Username"}
           />
