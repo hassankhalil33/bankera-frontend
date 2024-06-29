@@ -86,6 +86,11 @@ body {
   color: black;
 }
 
+.btn-navbar {
+  background-color: rgb(27, 27, 222);
+  color: white;
+}
+
 .btn-small {
   padding: 8px;
   font-size: 14px;

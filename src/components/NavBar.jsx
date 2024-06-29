@@ -29,31 +29,31 @@ const NavBar = () => {
     <div className="nav-bar">
       <h1>Bankera</h1>
       <div className="btn-div">
-        <Button onPress={handleHomeButton} size="large" color="white">
+        <Button onPress={handleHomeButton} size="large" color="navbar">
           Home
         </Button>
         {
           isAuth ?
             <>
-              < Button onPress={handleAccountButton} size="large" color="white">
+              < Button onPress={handleAccountButton} size="large" color="navbar">
                 Account
               </Button>
-              <Button onPress={handleAboutButton} size="large" color="white">
+              <Button onPress={handleAboutButton} size="large" color="navbar">
                 About
               </Button>
-              <Button onPress={handleLogoutButton} size="large" color="white">
+              <Button onPress={handleLogoutButton} size="large" color="red">
                 Logout
               </Button>
             </>
             :
             <>
-              <Button onPress={handleLoginButton} size="large" color="white">
+              <Button onPress={handleLoginButton} size="large" color="navbar">
                 Login
               </Button>
-              <Button onPress={handleRegisterButton} size="large" color="white">
+              <Button onPress={handleRegisterButton} size="large" color="navbar">
                 Register
               </Button>
-              <Button onPress={handleAboutButton} size="large" color="white">
+              <Button onPress={handleAboutButton} size="large" color="navbar">
                 About
               </Button>
             </>
