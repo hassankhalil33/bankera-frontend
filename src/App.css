@@ -73,22 +73,23 @@ body {
 
 .btn-blue {
   background-color: rgb(27, 27, 222);
-  color: rgb(230, 235, 240);
+  color: white;
 }
 
 .btn-red {
   background-color: rgb(255, 39, 39);
-  color: rgb(230, 235, 240);
+  color: white;
 }
 
 .btn-white {
   background-color: white;
-  color: black;
+  color: rgb(27, 27, 222);
 }
 
-.btn-navbar {
-  background-color: rgb(27, 27, 222);
-  color: white;
+.btn-blue:hover,
+.btn-white:hover,
+.btn-red:hover {
+  color: black;
 }
 
 .btn-small {

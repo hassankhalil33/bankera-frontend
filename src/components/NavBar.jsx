@@ -31,16 +31,16 @@ const NavBar = () => {
     <div className="nav-bar">
       <h1>Bankera</h1>
       <div className="btn-div">
-        <Button onPress={handleHomeButton} size="large" color="navbar">
+        <Button onPress={handleHomeButton} size="large">
           Home
         </Button>
         {
           jwt ?
             <>
-              < Button onPress={handleAccountButton} size="large" color="navbar">
+              < Button onPress={handleAccountButton} size="large">
                 Account
               </Button>
-              <Button onPress={handleAboutButton} size="large" color="navbar">
+              <Button onPress={handleAboutButton} size="large">
                 About
               </Button>
               <Button onPress={handleLogoutButton} size="large" color="red">
@@ -49,13 +49,13 @@ const NavBar = () => {
             </>
             :
             <>
-              <Button onPress={handleLoginButton} size="large" color="navbar">
+              <Button onPress={handleLoginButton} size="large">
                 Login
               </Button>
-              <Button onPress={handleRegisterButton} size="large" color="navbar">
+              <Button onPress={handleRegisterButton} size="large">
                 Register
               </Button>
-              <Button onPress={handleAboutButton} size="large" color="navbar">
+              <Button onPress={handleAboutButton} size="large">
                 About
               </Button>
             </>
