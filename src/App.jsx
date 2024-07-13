@@ -7,6 +7,7 @@ import LoginPage from './screens/LoginPage';
 import AboutPage from './screens/AboutPage';
 import HomePage from './screens/HomePage';
 import ProfilePage from './screens/ProfilePage';
+import useAxios from './apis/useAxios';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,8 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  useAxios();
+
   return (
     <div className="bg1">
       <UserContextProvider>

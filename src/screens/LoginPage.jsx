@@ -5,25 +5,37 @@ import NavBar from "../components/NavBar";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 import { UserContext } from "../contexts/UserContext";
+import { login } from "../apis/auth.apis";
 
 const LoginPage = () => {
-  const { setJWT, setUsername } = useContext(UserContext);
+  const { setAccessToken } = useContext(UserContext);
   const navigate = useNavigate();
   const [inputUsername, setInputUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [inputPassword, setInputPassword] = useState("");
 
   const handleUserChange = (e) => setInputUsername(e.target.value);
-  const handlePasswordChange = (e) => setPassword(e.target.value);
+  const handlePasswordChange = (e) => setInputPassword(e.target.value);
+
+  const postLogin = async (username, password) => {
+    try {
+      const data = await login({
+        username,
+        password
+      });
+      setAccessToken(data.accessToken);
+      setTimeout(() => {
+        navigate("/profile");
+      }, 1000);
+    } catch (error) {
+      console.log(error.response.data.message)
+    }
+  }
 
   const handleLogin = (e) => {
     e.preventDefault();
-    setUsername(inputUsername);
+    postLogin(inputUsername, inputPassword);
     setInputUsername("");
-    setPassword("");
-    setTimeout(() => {
-      navigate("/profile");
-      setJWT("logged.in");
-    }, 1000);
+    setInputPassword("");
   };
 
   return (
@@ -41,7 +53,7 @@ const LoginPage = () => {
             placeholder={"Username"}
           />
           <Input
-            value={password}
+            value={inputPassword}
             handleChange={handlePasswordChange}
             placeholder={"Password"}
             type="password"
