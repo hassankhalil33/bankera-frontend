@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
+import { logout } from "../apis/auth.apis";
 
 const NavBar = () => {
-  const { jwt, setJWT } = useContext(UserContext);
+  const { accessToken, setAccessToken } = useContext(UserContext);
   const navigate = useNavigate();
 
   const handleHomeButton = () => {
@@ -22,8 +23,9 @@ const NavBar = () => {
   const handleAccountButton = () => {
     navigate("/profile");
   };
-  const handleLogoutButton = () => {
-    setJWT("");
+  const handleLogoutButton = async () => {
+    await logout();
+    setAccessToken("");
     navigate("/");
   };
 
@@ -35,7 +37,7 @@ const NavBar = () => {
           Home
         </Button>
         {
-          jwt ?
+          accessToken ?
             <>
               < Button onPress={handleAccountButton} size="large">
                 Account

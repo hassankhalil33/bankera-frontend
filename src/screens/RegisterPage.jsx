@@ -4,17 +4,29 @@ import Button from "../components/Button";
 import NavBar from "../components/NavBar";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import { register } from "../apis/auth.apis";
 
-const handleRegister = (e) => {
-  e.preventDefault();
-  console.log("Registered!");
-};
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    setUsername("");
+    setPassword("");
+    setName("");
+    setEmail("");
+
+    try {
+      const data = await register({ username, password, email });
+      console.log(data.message);
+    } catch (error) {
+      console.log(error.response.data.message);
+    }
+  };
 
   const handleUserChange = (e) => {
     setUsername(e.target.value);

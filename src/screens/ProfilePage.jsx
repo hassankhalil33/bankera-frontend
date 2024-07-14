@@ -3,10 +3,10 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { UserContext } from "../contexts/UserContext";
 import { getUserData } from "../apis/user.apis";
-import useAxios from "../apis/useAxios";
+import useAxiosHeaders from "../apis/useAxios";
 
 const ProfilePage = () => {
-  useAxios();
+  useAxiosHeaders();
   const { user, setUser } = useContext(UserContext);
 
   const fetchUserData = async () => {
@@ -21,7 +21,7 @@ const ProfilePage = () => {
 
   useEffect(() => {
     fetchUserData();
-  }, [user])
+  }, [])
 
   return (
     <>

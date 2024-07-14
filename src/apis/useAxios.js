@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react';
 import axiosInstance from './axios';
 import { UserContext } from '../contexts/UserContext';
 
-const useAxios = () => {
+const useAxiosHeaders = () => {
   const { accessToken } = useContext(UserContext);
 
   useEffect(() => {
@@ -26,4 +26,4 @@ const useAxios = () => {
   return axiosInstance;
 };
 
-export default useAxios;
+export default useAxiosHeaders;

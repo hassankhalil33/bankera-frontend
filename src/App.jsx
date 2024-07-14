@@ -34,8 +34,6 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  useAxios();
-
   return (
     <div className="bg1">
       <UserContextProvider>
