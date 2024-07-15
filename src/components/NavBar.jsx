@@ -5,7 +5,7 @@ import { UserContext } from "../contexts/UserContext";
 import { logout } from "../apis/auth.apis";
 
 const NavBar = () => {
-  const { accessToken, setAccessToken } = useContext(UserContext);
+  const { accessToken, setAccessToken, setUser } = useContext(UserContext);
   const navigate = useNavigate();
 
   const handleHomeButton = () => {
@@ -26,6 +26,7 @@ const NavBar = () => {
   const handleLogoutButton = async () => {
     await logout();
     setAccessToken("");
+    setUser({});
     navigate("/");
   };
 
